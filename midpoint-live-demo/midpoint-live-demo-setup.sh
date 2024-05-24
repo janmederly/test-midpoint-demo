@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash TEST
 
 NAMESPACE=mp-demo
 HOST=demo.example.com
@@ -22,7 +22,7 @@ do
           echo "-i    custom ingressClass name. Default is default on your machine (one with annotation ingressclass.kubernetes.io/is-default-class: true). Make sure that you do have ONE default ingressClass or use this option to set a custom one."
           ;; 
     esac
-done
+done TEST
 
 sed -i "s/ingress_host: .*/ingress_host: $HOST/g" kustomize-base/kustomize-env-config/options-map.yaml
 
